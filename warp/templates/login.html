@@ -17,7 +17,20 @@
           color: #F44336;
           padding-bottom: 20px;
         }
-
+        .nav-wrapper, .btn, .btn:focus, .btn:hover {
+          background-color: #d32f2f !important;
+        }
+        .btn {
+          color: #fff !important;
+        }
+        .logo-title {
+          color: #d32f2f;
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          text-align: center;
+        }
     </style>
 {% endblock %}
 
@@ -26,9 +39,14 @@
 
     <nav>
         <div class="nav-wrapper">
-            <div class="center"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"></div>
+            <div class="center">
+                <span style="font-size:2.5rem; color:#fff; font-weight:bold; letter-spacing:2px;">OBST</span>
+            </div>
         </div>
     </nav>
+    <div class="logo-title" style="font-size:1.2rem; letter-spacing:1px; text-transform:uppercase;">
+        OFFICE SEAT BOOKING TOOL
+    </div>
 
     <form action="{{ url_for('auth.login') }}" method="post">
 
